@@ -26,7 +26,7 @@ Settings
 ------
 
 * `ARGONAUTS_ESCAPE_CHARACTERS` : Defaults to `('<', '>', '&')`.
-* `ARGONAUTS`: Default to DEBUG. Set to `True` to enable pretty printing.
+* `ARGONAUTS_DEBUG`: Default to DEBUG. Set to `True` to enable pretty printing.
 
 ------
 Filter

@@ -1,10 +1,10 @@
 Changelog
 =========
 
-1.2.1 (unreleased)
+1.2.1 (2017-10-02)
 ------------------
 
-- Nothing changed yet.
+- Added settings, ``ARGONAUTS_ESCAPE_CHARACTERS`` and ``ARGONAUTS_DEBUG``
 
 
 1.2.0 (2016-09-20)
