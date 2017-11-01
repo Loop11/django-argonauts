@@ -19,8 +19,8 @@ def dumps(*args, **kwargs):
     from argonauts.serializers import JSONArgonautsEncoder
 
     kwargs.setdefault('cls', JSONArgonautsEncoder)
-    # pretty print in DEBUG mode.
-    if settings.DEBUG:
+
+    if getattr(settings, 'ARGONAUTS_DEBUG', settings.DEBUG):
         kwargs.setdefault('indent', 4)
         kwargs.setdefault('separators', (',', ': '))
     else:

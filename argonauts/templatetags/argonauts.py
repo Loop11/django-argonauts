@@ -1,11 +1,13 @@
 from __future__ import absolute_import
 
+from argonauts import dumps as json_dumps
 from django import template
+from django.conf import settings
 from django.utils.safestring import mark_safe
 
-from argonauts import dumps as json_dumps
-
 register = template.Library()
+
+ESCAPES = getattr(settings, 'ARGONAUTS_ESCAPE_CHARACTERS', ('<', '>', '&'))
 
 
 @register.filter
@@ -23,8 +25,7 @@ def json(a):
     json_str = json_dumps(a)
 
     # Escape all the XML/HTML special characters.
-    escapes = ['<', '>', '&']
-    for c in escapes:
+    for c in ESCAPES:
         json_str = json_str.replace(c, r'\u%04x' % ord(c))
 
     # now it's safe to use mark_safe

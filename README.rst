@@ -14,6 +14,20 @@ writing simple REST views.
 A special JSON encoder is used to serialize QuerySets and objects with
 ``to_json`` methods.
 
+
+------
+Usage
+------
+
+Add 'argonauts' to INSTALLED_APPS within your settings.py file.
+
+------
+Settings
+------
+
+* `ARGONAUTS_ESCAPE_CHARACTERS` : Defaults to `('<', '>', '&')`.
+* `ARGONAUTS`: Default to DEBUG. Set to `True` to enable pretty printing.
+
 ------
 Filter
 ------
